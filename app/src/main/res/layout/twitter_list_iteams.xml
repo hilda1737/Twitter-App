@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cvtwitter"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,10 +17,12 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/imgmessages"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.024"
+            app:layout_constraintHorizontal_bias="0.04"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.062"
             app:srcCompat="@drawable/ic_baseline_person_24" />
 
         <TextView
@@ -67,8 +69,8 @@
             app:layout_constraintEnd_toStartOf="@+id/imgLove"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imgmessages"
-            app:srcCompat="@drawable/ic_baseline_repeat_24"
-            tools:layout_editor_absoluteY="200dp" />
+            app:layout_constraintTop_toTopOf="@+id/imgLove"
+            app:srcCompat="@drawable/ic_baseline_repeat_24" />
 
         <ImageView
             android:id="@+id/imgLove"
@@ -77,18 +79,19 @@
             app:layout_constraintEnd_toStartOf="@+id/imgShare"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imgRetweet"
-            app:srcCompat="@drawable/ic_baseline_favorite_24"
-            tools:layout_editor_absoluteY="200dp" />
+            app:layout_constraintTop_toTopOf="@+id/imgShare"
+            app:srcCompat="@drawable/ic_baseline_favorite_24" />
 
         <ImageView
             android:id="@+id/imgShare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imgLove"
-            app:srcCompat="@drawable/ic_baseline_share_24"
-            tools:layout_editor_absoluteY="200dp" />
+            app:layout_constraintTop_toBottomOf="@+id/tvProfile"
+            app:srcCompat="@drawable/ic_baseline_share_24" />
 
         <ImageView
             android:id="@+id/imgmessages"

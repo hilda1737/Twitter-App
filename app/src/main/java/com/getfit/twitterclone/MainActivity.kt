@@ -6,16 +6,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.getfit.twitterclone.databinding.ActivityMainBinding
 
 
-class MainActivity : AppCompatActivity() {
     class MainActivity : AppCompatActivity() {
         lateinit var  binding: ActivityMainBinding
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             binding=ActivityMainBinding.inflate((layoutInflater))
             setContentView(binding.root)
-            dispalyContacts()
+            dispalyTwitts()
         }
-        fun dispalyContacts(){
+        fun dispalyTwitts(){
             var contact = Twitter("Linda","Hildamoraa@gmail.com","I have all it takes to live my dream","4hhs",)
             var contact1= Twitter("laura","carolynmutuku","0727450674","2days")
             var contact2= Twitter("becky","Hildamoraa@gmail.com","I manifest I get","6days")
@@ -29,5 +28,5 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-}
+
 
